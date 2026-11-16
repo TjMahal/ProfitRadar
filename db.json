@@ -1,0 +1,8 @@
+{
+  "products": [
+    { "id": 1, "name": "Sugar 1kg", "buyPrice": 150, "sellPrice": 190, "stock": 40 },
+    { "id": 2, "name": "Cooking oil 1L", "buyPrice": 280, "sellPrice": 300, "stock": 3 }
+  ],
+  "sales": [],
+  "expenses": []
+}
