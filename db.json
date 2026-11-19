@@ -1,7 +1,33 @@
 {
+  "users": [
+    {
+      "shopName": "Njeri’s Duka",
+      "email": "njeri@test.com",
+      "password": "test123",
+      "id": 1
+    },
+    {
+      "shopName": "Baraka's Hardware",
+      "email": "baraka@test.com",
+      "password": "test123",
+      "id": 2
+    }
+  ],
   "products": [
-    { "id": 1, "name": "Sugar 1kg", "buyPrice": 150, "sellPrice": 190, "stock": 40 },
-    { "id": 2, "name": "Cooking oil 1L", "buyPrice": 280, "sellPrice": 300, "stock": 3 }
+    {
+      "id": 1,
+      "name": "Sugar 1kg",
+      "buyPrice": 150,
+      "sellPrice": 190,
+      "stock": 40
+    },
+    {
+      "id": 2,
+      "name": "Cooking oil 1L",
+      "buyPrice": 280,
+      "sellPrice": 300,
+      "stock": 3
+    }
   ],
   "sales": [],
   "expenses": []
