@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+ 
 function ProductRow({ product, onEdit, onDelete }) {
   const margin =
     product.sellPrice > 0
@@ -6,7 +8,7 @@ function ProductRow({ product, onEdit, onDelete }) {
 
   return (
     <tr>
-      <td>{product.name}</td>
+      <td><Link to={`/products/${product.id}`}>{product.name}</Link></td>
       <td>{product.buyPrice}</td>
       <td>{product.sellPrice}</td>
       <td>{product.stock}</td>

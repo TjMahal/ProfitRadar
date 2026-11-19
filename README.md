@@ -1,16 +1,30 @@
-# React + Vite
+# ProfitRadar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app that helps small shop owners track products, sales and expenses,
+see their real profit, and get alerts for low-margin and low-stock products.
 
-Currently, two official plugins are available:
+## Features
+- Register and log in (prototype login), with each shop seeing only its own data
+- Products: add, view, edit, delete, plus a details page for each product
+- Sales: record and delete sales; stock updates automatically
+- Expenses: record and delete expenses by category
+- Dashboard: revenue, cost of goods sold, expenses and operating profit
+- Radar alerts for low margin and low stock, and a product performance table
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Built with
+React, React Router, Vite, JSON Server, CSS
 
-## React Compiler
+## Run it locally
+1. `npm install`
+2. In one terminal: `npm run server` (API on port 3000)
+3. In another: `npm run dev` (app on port 5173)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Known limitations
+- Login is a prototype: passwords are stored as plain text in db.json
+- JSON Server is a temporary API, not a production database
+- Stock and sales are updated in two separate requests, so they can drift out of sync if one fails
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Next version
+- Real backend and database with proper authentication
+- Seasonal and monthly reports with charts
+- CSV import of existing records

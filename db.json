@@ -17,12 +17,48 @@
     {
       "name": "Sugar",
       "buyPrice": 150,
-      "sellPrice": 190,
-      "stock": 40,
+      "sellPrice": 200,
+      "stock": 35,
       "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "Cooking Oil 1L",
+      "buyPrice": 280,
+      "sellPrice": 310,
+      "stock": 3,
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "sales": [
+    {
+      "userId": 1,
+      "productId": 1,
+      "productName": "Sugar",
+      "quantity": 5,
+      "sellPrice": 200,
+      "buyPrice": 150,
+      "date": "2026-11-20",
       "id": 1
     }
   ],
-  "sales": [],
-  "expenses": []
+  "expenses": [
+    {
+      "category": "Rent",
+      "amount": 8000,
+      "date": "2026-11-20",
+      "note": "",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "category": "Transport",
+      "amount": 1200,
+      "date": "2026-11-20",
+      "note": "",
+      "userId": 1,
+      "id": 2
+    }
+  ]
 }
