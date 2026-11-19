@@ -2,8 +2,13 @@ import { useState } from 'react'
 
 const empty = { name: '', buyPrice: '', sellPrice: '', stock: '' }
 
-function ProductForm({ onAdd }) {
-  const [form, setForm] = useState(empty)
+function ProductForm({
+  initialValues = empty,
+  onSubmit,
+  submitLabel = 'Add product',
+  onCancel,
+}) {
+  const [form, setForm] = useState(initialValues)
   const [error, setError] = useState('')
 
   function handleChange(e) {
@@ -14,13 +19,13 @@ function ProductForm({ onAdd }) {
     e.preventDefault()
     setError('')
     try {
-      await onAdd({
+      await onSubmit({
         name: form.name.trim(),
         buyPrice: Number(form.buyPrice),
         sellPrice: Number(form.sellPrice),
         stock: Number(form.stock),
       })
-      setForm(empty)
+      setForm(initialValues)
     } catch (err) {
       setError(err.message)
     }
@@ -44,7 +49,10 @@ function ProductForm({ onAdd }) {
         Stock
         <input type="number" name="stock" min="0" step="1" value={form.stock} onChange={handleChange} required />
       </label>
-      <button type="submit" className="btn">Add product</button>
+      <button type="submit" className="btn">{submitLabel}</button>
+      {onCancel && (
+        <button type="button" className="row-btn" onClick={onCancel}>Cancel</button>
+      )}
       {error && <p className="error">{error}</p>}
     </form>
   )

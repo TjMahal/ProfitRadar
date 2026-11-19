@@ -1,4 +1,4 @@
-function ProductRow({ product }) {
+function ProductRow({ product, onEdit, onDelete }) {
   const margin =
     product.sellPrice > 0
       ? (((product.sellPrice - product.buyPrice) / product.sellPrice) * 100).toFixed(1)
@@ -11,6 +11,10 @@ function ProductRow({ product }) {
       <td>{product.sellPrice}</td>
       <td>{product.stock}</td>
       <td>{margin}%</td>
+      <td className="actions">
+        <button className="row-btn" onClick={() => onEdit(product)}>Edit</button>
+        <button className="row-btn danger" onClick={() => onDelete(product)}>Delete</button>
+      </td>
     </tr>
   )
 }
